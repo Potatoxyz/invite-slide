@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.bootcss.com/Swiper/4.3.0/css/swiper.css" rel="stylesheet">
+    <link rel="stylesheet" href="page1.css">
+</head>
+<body>
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+            <div class="page-wrap">
+                <div class="page">
+                    <img class="yao" src="./img/invite.png" alt="">
+                    <img class="circle" src="img/circle-invite.png" alt="">
+                    <p>【企业文化展示邀请函】</p>
+                    <p>2018年8月8日</p>
+                    <img class="house" src="./img/house.png" alt="">
+                    <img class="lantern" src="./img/lantern.png" alt="">
+                    <img class="flower-ss" src="./img/flower-ss.png" alt="">
+                    <img class="flower" src="./img/flower-big.png" alt="">
+                    <img class="line" src="./img/line.png" alt="">
+                    <img class="line-Rotate" src="./img/line.png" alt="">
+                    <img class="bamboo" src="./img/bamboo.png" alt="">
+                    <img class="moutain-b" src="./img/moutain2.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="page-wrap">
+                <div class="page"></div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="page-wrap">
+                <div class="page"></div>
+            </div>
+        </div>
+    </div>
+    <!-- If we need pagination -->
+    <!--<div class="swiper-pagination"></div>-->
+
+    <!-- If we need navigation buttons -->
+    <!--<div class="swiper-button-prev"></div>-->
+    <!--<div class="swiper-button-next"></div>-->
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+</div>
+<script src="https://cdn.bootcss.com/Swiper/4.3.0/js/swiper.js"></script>
+<script>
+    window.onload=function (ev) {
+        var mySwiper = new Swiper ('.swiper-container', {
+            // Optional parameters
+            direction: 'vertical',
+            loop: false,
+
+            // If we need pagination
+            // pagination: {
+            //     el: '.swiper-pagination',
+            // },
+
+            // Navigation arrows
+            // navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev',
+            // },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar'
+            }
+        })
+    }
+</script>
+</body>
+</html>

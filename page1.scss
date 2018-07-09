@@ -1,0 +1,154 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.ease-out{
+  transition: all ease-out 0.5s;
+}
+@mixin falldown($name,$desti) {
+  @keyframes #{$name} {
+    0%{top:-50%;}
+    100%{top:$desti;}
+  }
+}
+@mixin toleft($name,$desti) {
+  @keyframes #{$name}  {
+    0%{right:-50%;}
+    100%{right:$desti;}
+  }
+}
+@mixin totop($name,$desti) {
+  @keyframes #{$name}  {
+    0%{top:100%;}
+    100%{top:$desti;}
+  }
+}
+@mixin tobottom($name,$desti) {
+  @keyframes #{$name}  {
+    0%{bottom:-100%;}
+    100%{bottom:$desti;}
+  }
+}
+@mixin animate($name,$time){
+  animation: #{$name} 1.3s ease-out #{$time}s  1;
+  animation-fill-mode: forwards;
+}
+.swiper-container {
+  width: 100vw;
+  height: 100vh;
+  min-height: 300px;
+}
+.page-wrap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("./img/bg.jpg");
+  background-size: cover;
+  .page{
+    position: relative;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    border:1px solid white;
+    background: url("img/bg-papper.png") no-repeat;
+    background-size: 105% 100%;
+    img.yao{
+      margin-top: 30%;
+      width: 50%;
+    }
+    p{
+      width: 100%;
+      text-align: center;
+      font-size: 45px;
+      &:first-of-type{
+        margin: 35px;
+      }
+    }
+    .circle{
+      position: absolute;
+      width: 60%;
+      top: 0;
+      margin-top: 20%;
+      margin-left: -30px;
+    }
+    .flower-ss{
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      width: 60%;
+      transform: translateX(-50%);
+      @include animate(flower-ss,0);
+    }
+    @include falldown(flower-ss,-30px);
+    .house{
+      position: absolute;
+      top:0;
+      //right: -50px;
+      right:-50%;
+      width: 40%;
+      @include animate(house,0);
+    }
+    @include toleft(house,-50px);
+    .lantern{
+      position: absolute;
+      //top: 20%;
+      top:-100%;
+      right: -10px;
+      width: 10%;
+      @include animate(lantern,0.5);
+    }
+    @include falldown(lantern,20%);
+    .flower{
+      position: absolute;
+      //top: -30px;
+      top:-100%;
+      left: -40px;
+      width: 70%;
+      @include animate(flower,0.5);
+    }
+    @include falldown(flower,-30px);
+    .moutain-b{
+      align-self: flex-end;
+      width: 80%;
+      position: relative;
+      //bottom: -55px;
+      bottom:-50%;
+      @include animate(moutain-b,0)
+    }
+    @include tobottom(moutain-b,-55px);
+    .bamboo{
+      position: absolute;
+      //bottom:0;
+      bottom:-100%;
+      right: -50px;
+      width: 40%;
+      @include animate(bamboo,0.5)
+    }
+    @include tobottom(bamboo,0);
+    .line{
+      position: absolute;
+      //top: 15%;
+      top:100%;
+      left: -40px;
+      width: 30%;
+      @include animate(line,0)
+    }
+    @include totop(line,15%);
+    .line-Rotate{
+      position: absolute;
+      //top: 35%;
+      top:100%;
+      right: 20px;
+      width: 25%;
+      transform: rotateY(180deg);
+      @include animate(line-Rotate,0)
+    }
+    @include totop(line-Rotate,35%);
+  }
+}
